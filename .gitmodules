@@ -1,0 +1,12 @@
+[submodule "Filesaver"]
+	path = js/ext/Filesaver
+	url = https://github.com/eligrey/FileSaver.js.git
+[submodule "Leaflet.markercluster"]
+	path = js/ext/Leaflet.markercluster
+	url = https://github.com/Leaflet/Leaflet.markercluster.git
+[submodule "Leaflet.toolbar"]
+	path = js/ext/Leaflet.toolbar
+	url = https://github.com/Leaflet/Leaflet.toolbar.git
+[submodule "Leaflet"]
+	path = js/ext/Leaflet
+	url = https://github.com/Leaflet/Leaflet.git
