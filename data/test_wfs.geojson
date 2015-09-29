@@ -1,0 +1,583 @@
+{
+   "crs" : {
+      "type" : "EPSG",
+      "properties" : {
+         "code" : "4326"
+      }
+   },
+   "totalFeatures" : 9,
+   "bbox" : [
+      -4.0851773205036,
+      52.408854807906,
+      -3.91243464068519,
+      52.6485967661273
+   ],
+   "type" : "FeatureCollection",
+   "features" : [
+      {
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -4.07947836010511,
+                     52.4089791397957
+                  ],
+                  [
+                     -4.07875804751072,
+                     52.4093525854522
+                  ],
+                  [
+                     -4.0778965433957,
+                     52.4094793638255
+                  ],
+                  [
+                     -4.07727774710748,
+                     52.4093863759969
+                  ],
+                  [
+                     -4.07678580846699,
+                     52.4091611638961
+                  ],
+                  [
+                     -4.07690831030816,
+                     52.409128734347
+                  ],
+                  [
+                     -4.07754935825728,
+                     52.4092890488274
+                  ],
+                  [
+                     -4.0780605765845,
+                     52.4093157711628
+                  ],
+                  [
+                     -4.07853869646261,
+                     52.4091965514363
+                  ],
+                  [
+                     -4.07875130981937,
+                     52.4090192856914
+                  ],
+                  [
+                     -4.07885010094293,
+                     52.408854807906
+                  ],
+                  [
+                     -4.07947836010511,
+                     52.4089791397957
+                  ]
+               ]
+            ]
+         },
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d13",
+         "geometry_name" : "geom",
+         "properties" : {
+            "Evidence_of_Management" : "Yes",
+            "Broad_Habitat_Type" : "Rivers and streams",
+            "bbox" : [
+               -4.07947836010511,
+               52.408854807906,
+               -4.07678580846699,
+               52.4094793638255
+            ],
+            "Group_Name" : "WG Staff",
+            "pos_acc" : -1,
+            "Approx_Height_of_Plant(s)" : "> 2m",
+            "Describe_Weather" : "Dry",
+            "Field_Comments" : "Test",
+            "record_id" : "_hni3gvcnh",
+            "Distance_from_Observation" : "Distant (> 10m)",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "Species_Identified" : "Japanese Knotweed",
+            "Estimate_Area" : "50m squared",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Test_delet/1435137251230.jpg",
+            "timestamp" : "2015-06-24T09:15:54.870Z",
+            "Describe_Temperature" : "Warm",
+            "qa_name" : "Test_delet",
+            "River_bank_erosion" : "Not sure"
+         },
+         "type" : "Feature"
+      },
+      {
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d12",
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -3.97676275147801,
+                     52.6483158801869
+                  ],
+                  [
+                     -3.97744313150734,
+                     52.6485967661273
+                  ],
+                  [
+                     -3.97727765047577,
+                     52.6478462743339
+                  ],
+                  [
+                     -3.97736596954101,
+                     52.6480735276962
+                  ],
+                  [
+                     -3.97690454446563,
+                     52.6480562390014
+                  ],
+                  [
+                     -3.97676275147801,
+                     52.6483158801869
+                  ]
+               ]
+            ]
+         },
+         "geometry_name" : "geom",
+         "properties" : {
+            "Field_Comments" : "On the side of a steep sided gorge in the middle of mixed deciduous woodland. Visible through the trees. Difficult to estimate area.",
+            "record_id" : "_r4z65ati8",
+            "Distance_from_Observation" : "Far (3m - 10m)",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "Species_Identified" : "Japanese Knotweed",
+            "Estimate_Area" : "2m",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Doug (1)/1435325348730.jpg",
+            "timestamp" : "2015-06-26T13:31:00.133Z",
+            "qa_name" : "Doug (1)",
+            "Describe_Temperature" : "Warm",
+            "River_bank_erosion" : "No",
+            "Evidence_of_Management" : "No",
+            "Broad_Habitat_Type" : "Broadleaved, mixed and yew woodland",
+            "bbox" : [
+               -3.97744313150734,
+               52.6478462743339,
+               -3.97676275147801,
+               52.6485967661273
+            ],
+            "Group_Name" : "WG Staff",
+            "pos_acc" : -1,
+            "Approx_Height_of_Plant(s)" : "2m",
+            "Describe_Weather" : "Damp"
+         },
+         "type" : "Feature"
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               [
+                  [
+                     -4.07168946149705,
+                     52.5530317122433
+                  ],
+                  [
+                     -4.07127507101259,
+                     52.5530940239236
+                  ],
+                  [
+                     -4.07136474231452,
+                     52.5532474542146
+                  ],
+                  [
+                     -4.07176072240719,
+                     52.5531873344045
+                  ],
+                  [
+                     -4.0717248665248,
+                     52.5531268105823
+                  ],
+                  [
+                     -4.07168946149705,
+                     52.5530317122433
+                  ]
+               ]
+            ],
+            "type" : "Polygon"
+         },
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d11",
+         "type" : "Feature",
+         "properties" : {
+            "qa_name" : "Doug (6)",
+            "Describe_Temperature" : "Warm",
+            "River_bank_erosion" : "No",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Doug (6)/1435315409113.jpg",
+            "timestamp" : "2015-06-26T10:44:46.109Z",
+            "Estimate_Area" : "25m",
+            "Species_Identified" : "Japanese Knotweed",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "Distance_from_Observation" : "Very Close (< 1m)",
+            "Field_Comments" : "Next to Railway line. Large thicket.",
+            "record_id" : "_mnz91e9rk",
+            "Describe_Weather" : "Damp",
+            "pos_acc" : -1,
+            "Approx_Height_of_Plant(s)" : "1m",
+            "bbox" : [
+               -4.07176072240719,
+               52.5530317122433,
+               -4.07127507101259,
+               52.5532474542146
+            ],
+            "Group_Name" : "WG Staff",
+            "Broad_Habitat_Type" : "Marshes, wetalnd & Bogs",
+            "Evidence_of_Management" : "No"
+         },
+         "geometry_name" : "geom"
+      },
+      {
+         "properties" : {
+            "Describe_Weather" : "Damp",
+            "Approx_Height_of_Plant(s)" : "2m",
+            "pos_acc" : -1,
+            "Group_Name" : "WG Staff",
+            "bbox" : [
+               -4.07133485319783,
+               52.5524868146225,
+               -4.0712022449424,
+               52.5525687369669
+            ],
+            "Evidence_of_Management" : "No",
+            "Broad_Habitat_Type" : "Marshes, wetalnd & Bogs",
+            "timestamp" : "2015-06-26T10:49:07.956Z",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Doug (5)/1435315687273.jpg",
+            "River_bank_erosion" : "No",
+            "qa_name" : "Doug (5)",
+            "Describe_Temperature" : "Warm",
+            "Estimate_Area" : "5m",
+            "Species_Identified" : "Japanese Knotweed",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "record_id" : "_6r9kt06il",
+            "Field_Comments" : "Small thicket next to Railway line",
+            "Distance_from_Observation" : "Very Close (< 1m)"
+         },
+         "type" : "Feature",
+         "geometry_name" : "geom",
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d10",
+         "geometry" : {
+            "coordinates" : [
+               [
+                  [
+                     -4.07132991802497,
+                     52.5524868146225
+                  ],
+                  [
+                     -4.07133485319783,
+                     52.5524955041296
+                  ],
+                  [
+                     -4.07122505452365,
+                     52.5525687369669
+                  ],
+                  [
+                     -4.0712022449424,
+                     52.5525435559887
+                  ],
+                  [
+                     -4.07132157115558,
+                     52.5525346451127
+                  ],
+                  [
+                     -4.07132991802497,
+                     52.5524868146225
+                  ]
+               ]
+            ],
+            "type" : "Polygon"
+         }
+      },
+      {
+         "geometry_name" : "geom",
+         "properties" : {
+            "Species_Identified" : "Japanese Knotweed",
+            "Estimate_Area" : "2m",
+            "timestamp" : "2015-06-26T09:45:12.472Z",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Doug (7)/1435311850291.jpg",
+            "River_bank_erosion" : "No",
+            "qa_name" : "Doug (7)",
+            "Describe_Temperature" : "Warm",
+            "record_id" : "_q6344o31e",
+            "Field_Comments" : "Multiple isolated strands forming a cluster",
+            "Distance_from_Observation" : "Nearby (1m - 3m)",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "pos_acc" : -1,
+            "Approx_Height_of_Plant(s)" : "< 50cm",
+            "Describe_Weather" : "Rainy",
+            "Evidence_of_Management" : "No",
+            "Broad_Habitat_Type" : "Rivers and streams",
+            "Group_Name" : "WG Staff",
+            "bbox" : [
+               -3.92080102540339,
+               52.5839760446392,
+               -3.92056812407582,
+               52.5841198757983
+            ]
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -3.9206130992069,
+                     52.5841198757983
+                  ],
+                  [
+                     -3.92056812407582,
+                     52.5839760446392
+                  ],
+                  [
+                     -3.92080102540339,
+                     52.5840792506669
+                  ],
+                  [
+                     -3.9206130992069,
+                     52.5841198757983
+                  ]
+               ]
+            ]
+         },
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d0f"
+      },
+      {
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -3.91962141536974,
+                     52.5892530248032
+                  ],
+                  [
+                     -3.92383879086881,
+                     52.5879358401226
+                  ],
+                  [
+                     -3.9227384460621,
+                     52.5909898078366
+                  ],
+                  [
+                     -3.91243464068519,
+                     52.5905962412408
+                  ],
+                  [
+                     -3.91339834999401,
+                     52.587541822791
+                  ],
+                  [
+                     -3.91962141536974,
+                     52.5892530248032
+                  ]
+               ]
+            ]
+         },
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d0e",
+         "properties" : {
+            "Approx_Height_of_Plant(s)" : "2m",
+            "pos_acc" : -1,
+            "Describe_Weather" : "Rainy",
+            "Evidence_of_Management" : "No",
+            "Broad_Habitat_Type" : "Rivers and streams",
+            "bbox" : [
+               -3.92383879086881,
+               52.587541822791,
+               -3.91243464068519,
+               52.5909898078366
+            ],
+            "Group_Name" : "WG Staff",
+            "Species_Identified" : "Japanese Knotweed",
+            "Estimate_Area" : "1m",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Doug (9)/1435311451342.jpg",
+            "timestamp" : "2015-06-26T09:38:16.113Z",
+            "qa_name" : "Doug (9)",
+            "Describe_Temperature" : "Warm",
+            "River_bank_erosion" : "No",
+            "Field_Comments" : "150626_03",
+            "record_id" : "_x4dx3k85x",
+            "Distance_from_Observation" : "Nearby (1m - 3m)",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2"
+         },
+         "type" : "Feature",
+         "geometry_name" : "geom"
+      },
+      {
+         "geometry_name" : "geom",
+         "type" : "Feature",
+         "properties" : {
+            "Broad_Habitat_Type" : "Built-up areas, Roads and gardens",
+            "Evidence_of_Management" : "No",
+            "bbox" : [
+               -4.0851773205036,
+               52.4117512540073,
+               -4.08511339277648,
+               52.4117780893405
+            ],
+            "Group_Name" : "WG Staff",
+            "Approx_Height_of_Plant(s)" : "< 50cm",
+            "pos_acc" : -1,
+            "Describe_Weather" : "Dry",
+            "Distance_from_Observation" : "Very Close (< 1m)",
+            "Field_Comments" : "Test",
+            "record_id" : "_xjevt0bsi",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "Species_Identified" : "Japanese Knotweed",
+            "Estimate_Area" : "Single plant",
+            "Describe_Temperature" : "Warm",
+            "qa_name" : "Test_delet (1)",
+            "River_bank_erosion" : "No",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/Test_delet (1)/1435225448978.jpg",
+            "timestamp" : "2015-06-25T09:45:46.291Z"
+         },
+         "geometry" : {
+            "coordinates" : [
+               [
+                  [
+                     -4.08517600084503,
+                     52.4117710540799
+                  ],
+                  [
+                     -4.08511339277648,
+                     52.4117780893405
+                  ],
+                  [
+                     -4.08512219573922,
+                     52.4117512540073
+                  ],
+                  [
+                     -4.0851773205036,
+                     52.4117587113779
+                  ],
+                  [
+                     -4.08517600084503,
+                     52.4117710540799
+                  ]
+               ]
+            ],
+            "type" : "Polygon"
+         },
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d0d"
+      },
+      {
+         "geometry_name" : "geom",
+         "properties" : {
+            "Estimate_Area" : "3m",
+            "Species_Identified" : "Japanese Knotweed",
+            "River_bank_erosion" : "Not sure",
+            "Describe_Temperature" : "Very Warm",
+            "qa_name" : "cgc",
+            "timestamp" : "2015-07-03T13:09:14.593Z",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/cgc/1435928914811.jpg",
+            "Distance_from_Observation" : "Nearby (1m - 3m)",
+            "record_id" : "_euuvov2k1",
+            "Field_Comments" : "Ad hoc recording",
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "pos_acc" : -1,
+            "Approx_Height_of_Plant(s)" : "2m",
+            "Describe_Weather" : "Dry",
+            "Broad_Habitat_Type" : "Rivers and streams",
+            "Evidence_of_Management" : "No",
+            "Group_Name" : "WG Staff",
+            "bbox" : [
+               -4.07727334098761,
+               52.4095350780488,
+               -4.07667252617348,
+               52.4097968665791
+            ]
+         },
+         "type" : "Feature",
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d0c",
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -4.07727334098761,
+                     52.4096790619329
+                  ],
+                  [
+                     -4.07702657776031,
+                     52.4097968665791
+                  ],
+                  [
+                     -4.07667252617348,
+                     52.4096986960621
+                  ],
+                  [
+                     -4.076801272205,
+                     52.4095350780488
+                  ],
+                  [
+                     -4.0769943912524,
+                     52.4096267042111
+                  ],
+                  [
+                     -4.07727334098761,
+                     52.4096790619329
+                  ]
+               ]
+            ]
+         }
+      },
+      {
+         "type" : "Feature",
+         "properties" : {
+            "Group_Name" : "WG Staff",
+            "bbox" : [
+               -4.07951993511176,
+               52.4091194770002,
+               -4.07869765202416,
+               52.4095579760414
+            ],
+            "Broad_Habitat_Type" : "Rivers and streams",
+            "Evidence_of_Management" : "No",
+            "Describe_Weather" : "Dry",
+            "Approx_Height_of_Plant(s)" : "2m",
+            "pos_acc" : -1,
+            "userid" : "2338e388-f34e-25d9-945c-54cffd9c46c2",
+            "Distance_from_Observation" : "Far (3m - 10m)",
+            "record_id" : "_r7ocf0izl",
+            "Field_Comments" : "Ad hoc recording",
+            "River_bank_erosion" : "Yes",
+            "qa_name" : "cgc (2)",
+            "Describe_Temperature" : "Very Warm",
+            "timestamp" : "2015-07-03T13:01:44.763Z",
+            "Photograph_Your_Observation" : "2338e388-f34e-25d9-945c-54cffd9c46c2/records/cgc (2)/1435928386705.jpg",
+            "Estimate_Area" : "4m",
+            "Species_Identified" : "Japanese Knotweed"
+         },
+         "geometry_name" : "geom",
+         "id" : "sid-b42c1ef8-1aed-4deb-92e7-7ffa0a101e33.fid-2d2b0670_14e722b6306_-4d0b",
+         "geometry" : {
+            "coordinates" : [
+               [
+                  [
+                     -4.07951993511176,
+                     52.4091816525027
+                  ],
+                  [
+                     -4.07923409382258,
+                     52.4091194770002
+                  ],
+                  [
+                     -4.07869765202416,
+                     52.4093812679971
+                  ],
+                  [
+                     -4.07877275387596,
+                     52.4095579760414
+                  ],
+                  [
+                     -4.07907316128307,
+                     52.4093878127518
+                  ],
+                  [
+                     -4.07914826313478,
+                     52.4093289099218
+                  ],
+                  [
+                     -4.07951993511176,
+                     52.4091816525027
+                  ]
+               ]
+            ],
+            "type" : "Polygon"
+         }
+      }
+   ]
+}

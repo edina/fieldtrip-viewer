@@ -1,0 +1,351 @@
+{
+   "features" : [
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               -4.0618083,
+               52.4112873
+            ]
+         },
+         "name" : "Images",
+         "properties" : {
+            "id" : "_5nu9jdkcj",
+            "press" : "",
+            "cam_hoz" : "",
+            "title" : "App 0.1.0 Test 07/07/15",
+            "pos_tech" : "",
+            "temp" : "",
+            "pos_sat" : "",
+            "timestamp" : "2015-07-07T10:40:29.674Z",
+            "Make and Model" : "MOTOROLA XT1068",
+            "Azimuth" : 71.9643893972501,
+            "pos_acc" : -1,
+            "fields" : [
+               {
+                  "label" : "Take",
+                  "val" : [
+                     "1436265585953.jpg",
+                     "1436265611615.jpg",
+                     "1436265618282.jpg"
+                  ],
+                  "id" : "fieldcontain-multiimage-1"
+               }
+            ],
+            "OS Version" : "4.4.4",
+            "Pitch" : -44.0430268627232,
+            "cam_vert" : "",
+            "comp_bar" : "",
+            "editor" : "0eca46ba-899e-46fd-954f-c3bbea6db312.edtr",
+            "Roll" : -17.0674047640748,
+            "dev_os" : ""
+         }
+      },
+      {
+         "properties" : {
+            "Pitch" : -53.2212677297517,
+            "OS Version" : "4.4.4",
+            "pos_acc" : -1,
+            "fields" : [
+               {
+                  "id" : "fieldcontain-multiimage-1",
+                  "val" : null,
+                  "label" : "Take"
+               }
+            ],
+            "temp" : "",
+            "pos_tech" : "",
+            "Make and Model" : "MOTOROLA XT1068",
+            "pos_sat" : "",
+            "Azimuth" : 64.6802317040524,
+            "timestamp" : "2015-07-07T10:39:31.820Z",
+            "press" : "",
+            "title" : "App 0.1.0 Test 07/07/15",
+            "cam_hoz" : "",
+            "id" : "_wo7yenifa",
+            "Roll" : 0.383243621876708,
+            "dev_os" : "",
+            "editor" : "0eca46ba-899e-46fd-954f-c3bbea6db312.edtr",
+            "comp_bar" : "",
+            "cam_vert" : ""
+         },
+         "name" : "Poly",
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -3.79266421893444,
+                     53.1149485424993
+                  ],
+                  [
+                     -3.7874285469825,
+                     53.1147939925073
+                  ],
+                  [
+                     -3.78845851523535,
+                     53.1124241563923
+                  ],
+                  [
+                     -3.78828685385984,
+                     53.109848099425
+                  ],
+                  [
+                     -3.79008929830232,
+                     53.1075295162073
+                  ],
+                  [
+                     -3.79163425068159,
+                     53.1066020479187
+                  ],
+                  [
+                     -3.79549663162967,
+                     53.1069627324076
+                  ],
+                  [
+                     -3.79412334062591,
+                     53.1098996220764
+                  ],
+                  [
+                     -3.79240672687122,
+                     53.1121665576403
+                  ],
+                  [
+                     -3.79266421893444,
+                     53.1134545359697
+                  ],
+                  [
+                     -3.79266421893444,
+                     53.1149485424993
+                  ]
+               ]
+            ]
+         }
+      },
+      {
+         "properties" : {
+            "cam_vert" : "",
+            "comp_bar" : "",
+            "editor" : "0eca46ba-899e-46fd-954f-c3bbea6db312.edtr",
+            "Roll" : -8.15162416118783,
+            "dev_os" : "",
+            "id" : "_7o68egsvg",
+            "press" : "",
+            "title" : "App 0.1.0 Test 07/07/15",
+            "cam_hoz" : "",
+            "pos_tech" : "",
+            "temp" : "",
+            "pos_sat" : "",
+            "timestamp" : "2015-07-08T14:07:58.447Z",
+            "Azimuth" : -177.613591554467,
+            "Make and Model" : "SONY D5803",
+            "pos_acc" : -1,
+            "fields" : [
+               {
+                  "val" : [
+                     "modified.jpg",
+                     "modified.jpg",
+                     "modified.jpg"
+                  ],
+                  "label" : "Take",
+                  "id" : "fieldcontain-multiimage-1"
+               }
+            ],
+            "OS Version" : "5.0.2",
+            "Pitch" : -48.7609936922878
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -4.06986161453351,
+                     52.4167187935155
+                  ],
+                  [
+                     -4.06145870428963,
+                     52.4177688038801
+                  ],
+                  [
+                     -4.06175061454235,
+                     52.4143423312545
+                  ],
+                  [
+                     -4.06773009526568,
+                     52.410703706395
+                  ],
+                  [
+                     -4.06963733903546,
+                     52.4123441617018
+                  ],
+                  [
+                     -4.06986161453351,
+                     52.4167187935155
+                  ]
+               ]
+            ]
+         },
+         "name" : "MultiIm"
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               -3.79331797554652,
+               53.1195167258519
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature",
+         "name" : "Point",
+         "properties" : {
+            "timestamp" : "2015-07-07T10:38:01.147Z",
+            "pos_sat" : "",
+            "Azimuth" : 63.8038706222156,
+            "Make and Model" : "MOTOROLA XT1068",
+            "pos_tech" : "",
+            "temp" : "",
+            "title" : "App 0.1.0 Test 07/07/15",
+            "cam_hoz" : "",
+            "press" : "",
+            "id" : "_jntkj73wm",
+            "Pitch" : -51.8195831384708,
+            "OS Version" : "4.4.4",
+            "fields" : [
+               {
+                  "label" : "Take",
+                  "val" : null,
+                  "id" : "fieldcontain-multiimage-1"
+               }
+            ],
+            "pos_acc" : -1,
+            "cam_vert" : "",
+            "Roll" : -3.16949378905741,
+            "dev_os" : "",
+            "editor" : "0eca46ba-899e-46fd-954f-c3bbea6db312.edtr",
+            "comp_bar" : ""
+         }
+      },
+      {
+         "properties" : {
+            "id" : "_qxjcrh2tr",
+            "press" : "",
+            "cam_hoz" : "",
+            "title" : "App 0.1.0 Test 07/07/15",
+            "pos_tech" : "",
+            "temp" : "",
+            "pos_sat" : "",
+            "Azimuth" : 69.4014018923378,
+            "Make and Model" : "MOTOROLA XT1068",
+            "timestamp" : "2015-07-07T10:38:39.161Z",
+            "pos_acc" : -1,
+            "fields" : [
+               {
+                  "id" : "fieldcontain-multiimage-1",
+                  "label" : "Take",
+                  "val" : null
+               }
+            ],
+            "OS Version" : "4.4.4",
+            "Pitch" : -52.152537785036,
+            "cam_vert" : "",
+            "comp_bar" : "",
+            "editor" : "0eca46ba-899e-46fd-954f-c3bbea6db312.edtr",
+            "Roll" : 0.739259388318248,
+            "dev_os" : ""
+         },
+         "geometry" : {
+            "coordinates" : [
+               [
+                  -3.79646845492278,
+                  53.1323724560312
+               ],
+               [
+                  -3.79543848666993,
+                  53.1284586051983
+               ],
+               [
+                  -3.79415102635397,
+                  53.1255229831328
+               ],
+               [
+                  -3.79312105810112,
+                  53.1229477109574
+               ]
+            ],
+            "type" : "LineString"
+         },
+         "type" : "Feature",
+         "name" : "Line"
+      },
+      {
+         "name" : "Test2",
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [
+               [
+                  [
+                     -4.04976693734329,
+                     52.409356575319
+                  ],
+                  [
+                     -4.05031711236595,
+                     52.408053258994
+                  ],
+                  [
+                     -4.04309548991932,
+                     52.4036262409264
+                  ],
+                  [
+                     -4.05343525497024,
+                     52.4026575839775
+                  ],
+                  [
+                     -4.04441402090239,
+                     52.407654015082
+                  ],
+                  [
+                     -4.04976693734329,
+                     52.409356575319
+                  ]
+               ]
+            ]
+         },
+         "properties" : {
+            "id" : "_1x4tu7qzh",
+            "cam_hoz" : "",
+            "title" : "App 0.1.0 Test 07/07/15",
+            "press" : "",
+            "pos_sat" : "",
+            "Azimuth" : -168.896207456402,
+            "timestamp" : "2015-07-08T14:10:42.316Z",
+            "Make and Model" : "SONY D5803",
+            "pos_tech" : "",
+            "temp" : "",
+            "fields" : [
+               {
+                  "id" : "fieldcontain-multiimage-1",
+                  "label" : "Take",
+                  "val" : [
+                     "modified.jpg",
+                     "1436364617797.jpg",
+                     "modified.jpg"
+                  ]
+               }
+            ],
+            "pos_acc" : -1,
+            "OS Version" : "5.0.2",
+            "Pitch" : -57.7342435068513,
+            "cam_vert" : "",
+            "comp_bar" : "",
+            "editor" : "0eca46ba-899e-46fd-954f-c3bbea6db312.edtr",
+            "dev_os" : "",
+            "Roll" : 4.48200812628963
+         }
+      }
+   ],
+   "type" : "FeatureCollection"
+}
