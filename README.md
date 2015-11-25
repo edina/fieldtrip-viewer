@@ -7,7 +7,7 @@ Extensible PCAPI / W*S viewer
 2. git submodule sync
 3. git submodule update
 
-Then you can test everything works by loading the map with test data e.g. with a quick python webserver
+You can now test that everything works by loading the map with the test data using any webserver e.g.
 
 ```
 python -m SimpleHTTPServer 8080
