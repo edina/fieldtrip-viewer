@@ -26,7 +26,7 @@ TEST = true;
 */
 ENDPOINTS = {
     "PCAPI" : {
-                test_url: "data/Penparcau Butterfly Survey.geojson?",
+                test_url: "data/Snowdonia National Park Japanese Knotweed Survey - poly.geojson?",
                 private_base_url: 'https://dyfi.cobwebproject.eu/1.3/pcapi/records/local/00000000-0000-0000-0000-000000000000/?',
                 public_base_url: 'https://dyfi.cobwebproject.eu/1.3/pcapi/records/local/' + PUBLIC_UUID + '/?',
                 private_image_base: "https://dyfi.cobwebproject.eu/1.3/pcapi/records/local/00000000-0000-0000-0000-000000000000/",
