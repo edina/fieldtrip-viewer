@@ -23,7 +23,7 @@ as we are still defining requirements and it is too early to use requirejs  */
                 for ( var prop in props ){
                     if (  ( prop=="val") && (prop.label != "") ) {
                         //if image, preprocess
-                        if ( props.id.indexOf("fieldcontain-image-") === 0){ 
+                        if ( props.type=="image"){ 
                             imgurl = image_base + feature.name + "/"  + props.val;
                             props.val = "<img src='" + imgurl  + "'>"
                         }
@@ -288,7 +288,7 @@ as we are still defining requirements and it is too early to use requirejs  */
                 else{
                     json_url = ENDPOINTS[ENDPOINT_TYPE]["public_base_url"];
                 }
-                json_url+= 'filter=format,editor&frmt=geojson&id=' + sid + '.edtr';
+                json_url+= 'filter=format,editor&frmt=geojson&id=' + sid + '.json';
             }
             return json_url;
     }
