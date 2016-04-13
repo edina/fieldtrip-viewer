@@ -6,7 +6,7 @@ as we are still defining requirements and it is too early to use requirejs  */
     /* local (not exported) configuration options */
     /******************/
     image_base = PRIVATE_SURVEY? ENDPOINTS[ENDPOINT_TYPE]["private_image_base"] :  ENDPOINTS[ENDPOINT_TYPE]["public_image_base"];
-    
+
     /*** Popup Styles per feature ***/
     
     /**
@@ -22,23 +22,27 @@ as we are still defining requirements and it is too early to use requirejs  */
             feature.properties.fields.map( function (props) {
                 for ( var prop in props ){
                     if (  ( prop=="val") && (prop.label != "") ) {
-                        //if image, preprocess
+                        //if IMAGE then it is either multiimage, single image or null
                         if ( props.type=="image"){ 
-                            imgurl = image_base + feature.name + "/"  + props.val;
-                            props.val = "<img src='" + imgurl  + "'>"
-                        }
-                        //if mult-image, preprocess
-                        if ( props.id.indexOf("fieldcontain-multiimage-") === 0){ 
-                            v="<br/>";
-                            images = props.val;
-                            for( var idx in images){
-                                im = images[idx];
-                                im=im.replace(".jpg","_thumb.jpg");
-                                imgurl = image_base + feature.name + "/"  + im;
-                                v += "<img src='" + imgurl  + "'>"
-                            };
-                            props.val = v;
-                        }
+			    if (props.val instanceof Array){ //MULTIIMAGE
+				v="<br/>";
+				images = props.val;
+				for( var idx in images){
+                                    im = images[idx];
+                                    im=im.replace(".jpg","_thumb.jpg");
+                                    imgurl = image_base + feature.name + "/"  + im;
+                                    v += "<img src='" + imgurl  + "'>"
+				};
+				props.val = v;
+			    }
+			    else if(props.val === null){ // empty image
+				props.val = "<i>blank</i>"
+			    }
+			    else{ //single image filename
+				imgurl = image_base + feature.name + "/"  + props.val;
+				props.val = "<img src='" + imgurl  + "'>"
+                            }
+			}
                         popupstr += "<b>" + props.label + "</b>: " + props.val + "<br>";
                     }
 
