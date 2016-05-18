@@ -22,30 +22,33 @@ as we are still defining requirements and it is too early to use requirejs  */
             feature.properties.fields.map( function (props) {
                 for ( var prop in props ){
                     if (  ( prop=="val") && (prop.label != "") ) {
-                        //if IMAGE then it is either multiimage, single image or null
-                        if ( props.type=="image"){ 
-			    if (props.val instanceof Array){ //MULTIIMAGE
-				v="<br/>";
-				images = props.val;
-				for( var idx in images){
-                                    im = images[idx];
-                                    im=im.replace(".jpg","_thumb.jpg");
-                                    imgurl = image_base + feature.name + "/"  + im;
-                                    v += "<img src='" + imgurl  + "'>"
-				};
-				props.val = v;
-			    }
-			    else if(props.val === null){ // empty image
+			if ( props.type=="image"){
+			    if(props.val === null){ // empty image
 				props.val = "<i>blank</i>"
 			    }
 			    else{ //single image filename
 				imgurl = image_base + feature.name + "/"  + props.val;
 				props.val = "<img src='" + imgurl  + "'>"
-                            }
+			    }
 			}
-                        popupstr += "<b>" + props.label + "</b>: " + props.val + "<br>";
-                    }
-
+			if (props.type=="multiimage"){
+			    if(props.val === null){ // empty image
+				props.val = "<i>blank</i>"
+			    }
+			    else{
+				v="<br/>";
+				images = props.val;
+				for( var idx in images){
+				    im = images[idx];
+				    imgurl = image_base + feature.name + "/"  + im;
+				    imgurl_thumb = image_base + feature.name + "/"  + im.replace(".jpg","_thumb.jpg");
+				    v += '<a href="' + imgurl  + '"><img src="' + imgurl_thumb  + '" style="width:100px;border:0;"></a>'
+				};
+				props.val = v;
+			    }
+			}
+			popupstr += "<b>" + props.label + "</b>: " + props.val + "<br>";
+		    }
                 }
             });
         }
