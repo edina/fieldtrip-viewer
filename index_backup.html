@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<base href="/dataviewer/">
+
+<meta charset="utf-8" />
+
+<title>COBWEB Sensor Data Viewer</title>
+<link rel="stylesheet" href="js/ext/Leaflet/dist/leaflet.css" />
+<script src="js/ext/Leaflet/dist/leaflet.js"></script>
+<!--<link rel="stylesheet" href="http://leaflet.cloudmade.com/dist/leaflet.css">
+<script src="http://leaflet.cloudmade.com/dist/leaflet.js"></script>-->
+<style>
+
+html, body, #map {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+div#fixedheader {
+	background: #304820;
+	color: white;
+	width: 100%;
+	font-size:35px;
+}
+
+P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+.legend {
+	color: DimGrey;
+}
+
+.legend i {
+	width: 15px;
+	height: 15px;
+	float: left;
+	margin-right: 8px;
+	opacity: 0.7;
+}
+
+.info {
+	padding: 6px 8px;
+	font: 14px/16px Arial, Helvetica, sans-serif;
+	background: white;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+
+.leaflet-popup-content {
+	min-width: 500px;
+}
+</style>
+
+<link rel="stylesheet"
+	href="js/ext/Leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet"
+	href="js/ext/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<script src="js/ext/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<link rel="stylesheet"
+	href="js/ext/Leaflet.toolbar/dist/leaflet.toolbar.css" />
+<script src="js/ext/Leaflet.toolbar/dist/leaflet.toolbar.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="js/ext/OpenWeather/leaflet-openweathermap.css" />
+	<script type="text/javascript" src="js/ext/OpenWeather/leaflet-openweathermap.js"></script>
+
+	
+	 <link rel="stylesheet" href="js/ext/Mouse/L.Control.MousePosition.css" />
+    <script src="js/ext/Mouse/L.Control.MousePosition.js"></script>
+
+<!-- Add jQuery library -->
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script type="text/javascript">
+	$.getScript("https://www.google.com/jsapi", function() {
+		google.load('visualization', '1', {
+			'callback' : 'console.log(\'Chart API loaded\')',
+			'packages' : [ 'corechart' ]
+		});
+
+	});
+</script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript"
+	src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<script src="js/ext/Filesaver/FileSaver.min.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet"
+	href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css"
+	media="screen" />
+<script type="text/javascript"
+	src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src="js/config.js"></script>
+ <script src="js/utils.js"></script>
+<script src="js/knotweed_config.js"></script>
+<script src="js/floodutil.js"></script>
+<script src="js/sensorutil.js"></script>
+<script src="js/overlayutil.js"></script>
+<script src="js/socialutil.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+	});
+</script>
+
+</head>
+<body>
+	<div id="fixedheader"><div><center><img src="tree.png"/>COBWEB Sensor Data Viewer<img src="eu.png"/></center></div></div>
+<style>
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:150px;right:10px;
+  z-index:1;
+  border-radius:3px;
+  width:120px;
+  border:1px solid rgba(0,0,0,0.4);
+  }
+  .menu-ui a {
+    font-size:13px;
+    color:#404040;
+    display:block;
+    margin:0;padding:0;
+    padding:10px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    text-align:center;
+    }
+    .menu-ui a:first-child {
+      border-radius:3px 3px 0 0;
+      }
+    .menu-ui a:last-child {
+      border:none;
+      border-radius:0 0 3px 3px;
+      }
+    .menu-ui a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      }
+    .menu-ui a.active {
+      background:#3887BE;
+      color:#FFF;
+      }
+      .menu-ui a.active:hover {
+        background:#3074a4;
+        }
+</style>
+
+    <div id="map"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<nav id='map-ui' class='menu-ui'>
+		<a href='#' class='' id='markers3'>Social Sensors</a>
+		<a href='#' class='' id='markers1'>Physical Sensors</a>
+		<a href='#' class='' id='markers2'>Flooding Data</a>
+		<a href='#' class='' id='markers4'>Knotweed Data</a>
+		<a href='#' class='' id='clouds'>Clouds WMS</a>
+		<a href='#' class='' id='precipitation'>Precipitation WMS</a>
+		<a href='#' class='' id='rain'>Rain WMS</a>
+		<a href='#' class='' id='wind'>Wind WMS</a>
+		<a href='#' class='' id='temperature'>Temperature WMS</a>
+		<a href='#' class='' id='snow'>Snow WMS</a>
+		<a href='#' class='' id='pressure'>Pressure WMS</a>
+		<a href='#' class='' id='pressure_cntr'>Pressure Contour WMS</a>
+		<a href='#' class='' id='earthquake'>Earthquakes WFS</a>
+	</nav>
+ <script type="text/javascript">
+		// Layer switcher
+
+document.getElementById('markers4').onclick = function () {
+    var enable = this.className !== 'active';
+    if(enable){
+		map.addLayer(markers4);
+		map.fitBounds(L.featureGroup([markers4]).getBounds()); 
+	}else{
+		map.removeLayer(markers4);
+	}
+    this.className = enable ? 'active' : '';
+    return false;
+};
+		
+document.getElementById('markers3').onclick = function () {
+    var enable = this.className !== 'active';
+    if(enable){
+		map.addLayer(markers3);
+		map.fitBounds(L.featureGroup([markers3]).getBounds()); 
+	}else{
+		map.removeLayer(markers3);
+	}
+    this.className = enable ? 'active' : '';
+    return false;
+};
+		
+document.getElementById('markers1').onclick = function () {
+    var enable = this.className !== 'active';
+	    if(enable){
+		map.addLayer(markers1);
+		map.fitBounds(L.featureGroup([markers1]).getBounds()); 
+	}else{
+		map.removeLayer(markers1);
+	}
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('markers2').onclick = function () {
+    var enable = this.className !== 'active';
+	    if(enable){
+		map.addLayer(markers2);
+		map.fitBounds(L.featureGroup([markers2]).getBounds()); 
+	}else{
+		map.removeLayer(markers2);
+	}
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('earthquake').onclick = function () {
+    var enable = this.className !== 'active';
+	    if(enable){
+		map.addLayer(earthquake);
+		map.fitBounds(L.featureGroup([earthquake]).getBounds()); 
+	}else{
+		map.removeLayer(earthquake);
+	}
+    this.className = enable ? 'active' : '';
+    return false;
+};
+	
+		
+document.getElementById('clouds').onclick = function () {
+    var enable = this.className !== 'active';
+	if(enable){
+		map.addLayer(clouds);
+		clouds.setOpacity(0.6);
+	}else{
+		map.removeLayer(clouds);
+	}
+    //clouds.setOpacity(enable ? 0.6 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('precipitation').onclick = function () {
+    var enable = this.className !== 'active';
+		if(enable){
+		map.addLayer(precipitation);
+		precipitation.setOpacity(0.6);
+	}else{
+		map.removeLayer(precipitation);
+	}
+   // precipitation.setOpacity(enable ? 0.6 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('rain').onclick = function () {
+    var enable = this.className !== 'active';
+		if(enable){
+		map.addLayer(rain);
+		rain.setOpacity(0.6);
+	}else{
+		map.removeLayer(rain);
+	}
+   // precipitation.setOpacity(enable ? 0.6 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('wind').onclick = function () {
+    var enable = this.className !== 'active';
+			if(enable){
+		map.addLayer(wind);
+		wind.setOpacity(0.4);
+	}else{
+		map.removeLayer(wind);
+	}
+ //   wind.setOpacity(enable ? 0.4 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('temperature').onclick = function () {
+    var enable = this.className !== 'active';
+				if(enable){
+		map.addLayer(temperature);
+		temperature.setOpacity(0.4);
+	}else{
+		map.removeLayer(temperature);
+	}
+    //temperature.setOpacity(enable ? 0.4 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('snow').onclick = function () {
+    var enable = this.className !== 'active';
+					if(enable){
+		map.addLayer(snow);
+		snow.setOpacity(0.6);
+	}else{
+		map.removeLayer(snow);
+	}
+    //snow.setOpacity(enable ? 0.6 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('pressure').onclick = function () {
+    var enable = this.className !== 'active';
+						if(enable){
+		map.addLayer(pressure);
+		pressure.setOpacity(0.5);
+	}else{
+		map.removeLayer(pressure);
+	}
+    //pressure.setOpacity(enable ? 0.4 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('pressure_cntr').onclick = function () {
+    var enable = this.className !== 'active';
+	if(enable){
+		map.addLayer(pressure_cntr);
+		pressure_cntr.setOpacity(1);
+	}else{
+		map.removeLayer(pressure_cntr);
+	}
+    pressure_cntr.setOpacity(enable ? 1 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+          </script>
+	<div id="selection_div">
+		<img src="logo5.png" />
+		<div id="chart_div"></div>
+		<div id="checkboxes"></div>
+		<div id="checkboxes2"></div>
+
+		</div>
+</body>
+</html>

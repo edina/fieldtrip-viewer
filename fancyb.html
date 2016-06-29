@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/dataviewer/">
+     <title>COBWEB Sensor Data Viewer</title>
+     <meta charset="utf-8" />
+
+     <link rel="stylesheet" href="js/ext/Leaflet/dist/leaflet.css" />
+	 
+	 <link rel="stylesheet" href="js/ext/fancybox.css" />
+        <script type="text/javascript">
+		
+		$(document).ready(function() {
+			$("a#link").fancybox({	
+			});
+		}); 
+        </script>
+
+<!--    <script src="js/ext/proj4js-compressed.js"></script>-->
+<!--    <script src="js/proj4leaflet.js"></script>-->
+
+    <link rel="stylesheet" href="js/ext/Leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="js/ext/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="js/ext/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    <link rel="stylesheet" href="js/ext/Leaflet.toolbar/dist/leaflet.toolbar.css" />
+    <script src="js/ext/Leaflet.toolbar/dist/leaflet.toolbar.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+
+	<script src="js/ext/fancybox.js"></script>
+    
+	
+	
+	
+
+</head>
+<body>
+
+        <div id="map"></div>
+		
+		<div id="chart_div" style="width:400; height:300"></div>
+
+
+    
+		
+		<a href="/dataviewer/js/ext/fancybox/fancy_progress.png" id="link">Fancybox</a>
+		 <script type="text/javascript">
+			$("a#link").fancybox({
+			
+			'callbackOnClose': function() {
+			   $("#fancy_content").empty();
+				  }
+			 });
+		 </script>
+		 
+		     <button class="fancybox" value="Open Fancybox">Open Fancybox</button>
+			<div class="hidden" id="fancybox-popup-form">
+				(your Fancybox content goes in here)
+			</div>
+			
+			<script type="text/javascript">	
+			    $('.fancybox').click(function () {
+					$.fancybox([
+						{ href : '#fancybox-popup-form' }
+					]);
+				});
+			</script>
+	
+		
+		
+		<div style="display:none"><div style='height:200px;width:200px' id="data"></div></div>
+</body>
+</html>

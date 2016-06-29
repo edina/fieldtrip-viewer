@@ -16,3 +16,6 @@
 [submodule "spin.js"]
 	path = js/ext/spin.js
 	url = https://github.com/fgnass/spin.js.git
+[submodule "fancybox"]
+	path = fancybox
+	url = https://github.com/fancyapps/fancyBox.git

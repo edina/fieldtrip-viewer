@@ -118,8 +118,9 @@ $(document).ready(function(){
     init_map(); //backdrop
 	
 	
-	addGeoJSONData("/wug",wug,"Weather Underground");
-	addGeoJSONData("/saltmarsh",salt,"Salt Marsh");
+	addGeoJSONData("/wug",wug,1,"Weather Underground");
+	map.addLayer(wug);
+	/*addGeoJSONData("/saltmarsh",salt,"Salt Marsh");
 	addGeoJSONData("/peatbog",peat,"Peat Bog");
 	addGeoJSONData("/shoothill",shoot,0,"Shoothill");
 	
@@ -180,7 +181,7 @@ $(document).ready(function(){
    }
     else{
         console.log("sid is not defined and not in testing mode. Aborting");
-    }
+    }*/
 
 });
 

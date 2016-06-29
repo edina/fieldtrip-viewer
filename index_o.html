@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<base href="/dataviewer/">
+     <title>COBWEB Sensor Data Viewer</title>
+     <meta charset="utf-8" />
+
+     <link rel="stylesheet" href="js/ext/Leaflet/dist/leaflet.css" />
+	 
+	
+    <script src="js/ext/Leaflet/dist/leaflet.js"></script>
+    <style>
+            html, body, #map { 
+	            padding: 0px;
+	            margin: 0px;
+                    height: 100%;
+                    width: 100%;
+            }
+
+            .legend {
+                color: DimGrey;
+            }
+            .legend i {
+                width: 15px;
+                height: 15px;
+                float: left;
+                margin-right: 8px;
+                opacity: 0.7;
+            }
+            .info {
+                padding: 6px 8px;
+                font: 14px/16px Arial, Helvetica, sans-serif;
+                background: white;
+                background: rgba(255,255,255,0.8);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
+            }
+            .leaflet-popup-content {
+                min-width: 500px;
+            }
+
+    </style>
+	
+
+	 
+
+
+<!--    <script src="js/ext/proj4js-compressed.js"></script>-->
+<!--    <script src="js/proj4leaflet.js"></script>-->
+
+    <link rel="stylesheet" href="js/ext/Leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="js/ext/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="js/ext/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    <link rel="stylesheet" href="js/ext/Leaflet.toolbar/dist/leaflet.toolbar.css" />
+    <script src="js/ext/Leaflet.toolbar/dist/leaflet.toolbar.js"></script>
+
+    <script src="js/ext/jquery-1.8.2.js"></script>
+	
+		
+		
+    <script src="js/ext/Filesaver/FileSaver.min.js"></script>
+	
+	<script type="text/javascript">
+	/*$.getScript("https://www.google.com/jsapi", function () {
+		 google.load('visualization', '1', { 'callback': 'console.log(\'Chart API loaded\')', 'packages': ['corechart'] });
+		
+	});*/
+	</script>
+	
+	<script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+	
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+		
+    <link rel="stylesheet" href="js/ext/fancybox.css" />
+	<script src="js/ext/fancybox.js"></script>
+	
+	 <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('.fancybox').fancybox();
+			document.getElementById("bt1").onclick=function() {
+				 alert('hello');
+				 $.fancybox( '<div><h1>Lorem Lipsum</h1><p>Lorem lipsum</p></div>', {
+					title : 'Custom Title'
+				});
+				
+			};
+			
+        });
+
+    </script>
+		
+
+	
+	
+
+</head>
+<body>
+
+        <div id="map"></div>
+		
+		<div id="chart_div" style="width:400; height:300"></div>
+
+
+        <script type="text/javascript">
+          </script>
+		  
+
+
+		 
+
+		
+		
+			
+			<script type="text/javascript">	
+			function myFun(){
+			
+				
+			}
+			</script>
+			
+			 <button id="bt1" onclick="myFun()">Click me</button>
+		 
+		 
+		 <div style="display:none"><div style='height:200px;width:200px;display:none' id="data"></div></div>
+</body>
+</html>

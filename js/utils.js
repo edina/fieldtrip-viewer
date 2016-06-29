@@ -6,7 +6,7 @@ as we are still defining requirements and it is too early to use requirejs  */
     /* local (not exported) configuration options */
     /******************/
     image_base = PRIVATE_SURVEY? ENDPOINTS[ENDPOINT_TYPE]["private_image_base"] :  ENDPOINTS[ENDPOINT_TYPE]["public_image_base"];
-
+    
     /*** Popup Styles per feature ***/
     
     /**
@@ -22,33 +22,26 @@ as we are still defining requirements and it is too early to use requirejs  */
             feature.properties.fields.map( function (props) {
                 for ( var prop in props ){
                     if (  ( prop=="val") && (prop.label != "") ) {
-			if ( props.type=="image"){
-			    if(props.val === null){ // empty image
-				props.val = "<i>blank</i>"
-			    }
-			    else{ //single image filename
-				imgurl = image_base + feature.name + "/"  + props.val;
-				props.val = "<img src='" + imgurl  + "'>"
-			    }
-			}
-			if (props.type=="multiimage"){
-			    if(props.val === null){ // empty image
-				props.val = "<i>blank</i>"
-			    }
-			    else{
-				v="<br/>";
-				images = props.val;
-				for( var idx in images){
-				    im = images[idx];
-				    imgurl = image_base + feature.name + "/"  + im;
-				    imgurl_thumb = image_base + feature.name + "/"  + im.replace(".jpg","_thumb.jpg");
-				    v += '<a href="' + imgurl  + '"><img src="' + imgurl_thumb  + '" style="width:100px;border:0;"></a>'
-				};
-				props.val = v;
-			    }
-			}
-			popupstr += "<b>" + props.label + "</b>: " + props.val + "<br>";
-		    }
+                        //if image, preprocess
+                        if ( props.id.indexOf("fieldcontain-image-") === 0){ 
+                            imgurl = image_base + feature.name + "/"  + props.val;
+                            props.val = "<img src='" + imgurl  + "'>"
+                        }
+                        //if mult-image, preprocess
+                        if ( props.id.indexOf("fieldcontain-multiimage-") === 0){ 
+                            v="<br/>";
+                            images = props.val;
+                            for( var idx in images){
+                                im = images[idx];
+                                im=im.replace(".jpg","_thumb.jpg");
+                                imgurl = image_base + feature.name + "/"  + im;
+                                v += "<img src='" + imgurl  + "'>"
+                            };
+                            props.val = v;
+                        }
+                        popupstr += "<b>" + props.label + "</b>: " + props.val + "<br>";
+                    }
+
                 }
             });
         }
@@ -242,6 +235,7 @@ as we are still defining requirements and it is too early to use requirejs  */
                 }
             });
         new L.Toolbar.Control({
+            position: 'bottomleft',
             actions: [ExportCSVAction, ExportGeoJSONAction]
         }).addTo(map);
     } 
@@ -295,7 +289,7 @@ as we are still defining requirements and it is too early to use requirejs  */
                 else{
                     json_url = ENDPOINTS[ENDPOINT_TYPE]["public_base_url"];
                 }
-                json_url+= 'filter=format,editor&frmt=geojson&id=' + sid + '.json';
+                json_url+= 'filter=format,editor&frmt=geojson&id=' + sid + '.edtr';
             }
             return json_url;
     }
